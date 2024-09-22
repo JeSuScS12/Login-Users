@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Login_Users
 {
-    public partial class frmIngreso : Form
+    public partial class frmPrograma : Form
     {
-        public frmIngreso()
+        public frmPrograma()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmPrograma_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

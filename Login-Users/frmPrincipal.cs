@@ -19,7 +19,7 @@ namespace Login_Users
         }
 
         //Instanciar conexion
-        conexion nuevo = new conexion();
+        conexionBD nuevo = new conexionBD();
 
         //Funcion Abrir Formularios
         private void AbrirFrm(object frmHijo)

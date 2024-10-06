@@ -21,7 +21,7 @@ namespace Login_Users
         }
 
         //Instancia de conexion
-        conexion nuevo = new conexion();
+        conexionBD nuevo = new conexionBD();
 
 
         private void frmRegistro_Load(object sender, EventArgs e)
@@ -164,7 +164,28 @@ namespace Login_Users
         //Agrega Codigo AQUI  ✅
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text != "" && txtApellido.Text != "" && txtCorreo.Text != "" && 
+                txtTelefono.Text != "" && txtUsuario.Text != "" && txtContraseña.Text != "")
+            {
+                string usuario = txtUsuario.Text;
+                string contraseña = txtContraseña.Text;
+                string nombre = txtNombre.Text;
+                string apellido = txtApellido.Text;
+                string correo = txtCorreo.Text;
+                string telefono = txtTelefono.Text;
 
+                nuevo.AgregarCuenta(usuario, contraseña, nombre, apellido, correo, telefono);
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtCorreo.Text = "";
+                txtTelefono.Text = "";                
+            }
+            else
+            {
+                MessageBox.Show("Debe rellenar todos los campos para registrar la cuenta.", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
         }
     }
 }

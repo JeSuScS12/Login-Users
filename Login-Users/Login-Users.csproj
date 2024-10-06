@@ -102,6 +102,9 @@
     <Content Include="BD\Prueba-BD.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="BD\SistemaGestion.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="BD\Usuarios.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

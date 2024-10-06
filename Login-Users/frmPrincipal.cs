@@ -106,19 +106,11 @@ namespace Login_Users
         }
 
 
-        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkMostrar.Checked)
-            {
-                if (txtContraseña.PasswordChar == '●') txtContraseña.PasswordChar = '\0';
-            }
-            else txtContraseña.PasswordChar = '●';
-        }
-
+        //Boton de validacion del Ususario en la BD
         private void btnIngreso_Click_1(object sender, EventArgs e)
         {
-            string user = txtUsuario.Text;
-            string pass = txtContraseña.Text;
+            string user = txtUsuario.Text.Trim();
+            string pass = txtContraseña.Text.Trim();
 
             if (txtUsuario.Text != "")
             {
@@ -144,6 +136,8 @@ namespace Login_Users
             lblError.Visible = true;
         }
 
+
+        //Cambiar el formato de la contraseña
         private void chkMostrar_CheckedChanged_1(object sender, EventArgs e)
         {
             if (chkMostrar.Checked)

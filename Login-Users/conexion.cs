@@ -20,9 +20,10 @@ namespace ConexionBD
 
         public conexion()
         {
-             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/Usuarios.accdb";  // <--- Agregar la ruta de la Base de Datos
+             cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=../../BD/SistemaGestion.accdb";  // <--- Agregar la ruta de la Base de Datos
         }
 
+        //Metodo para probar si la conexion y ruta esta bien
         public void Conect()
         {
             try
@@ -40,7 +41,7 @@ namespace ConexionBD
         //Metodo de validacion del usuario
         public bool ValidarUsuario(string user, string pass)
         {
-            string consulta = $"select count(*) from Usuarios where Usuario = '{user}' and Contraseña = '{pass}'";
+            string consulta = $"select count(*) from Cuentas where Usuario = '{user}' and Contraseña = '{pass}'";  //Query de Validacion (Mejorar metodo) 
             conectar = new OleDbConnection(cadena);
             comando = new OleDbCommand(consulta, conectar);
             try

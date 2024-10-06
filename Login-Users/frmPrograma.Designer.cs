@@ -38,7 +38,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(194, 158);
+            this.label2.Location = new System.Drawing.Point(200, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(570, 117);
             this.label2.TabIndex = 7;
@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 321);
+            this.label1.Location = new System.Drawing.Point(190, 277);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(599, 115);
             this.label1.TabIndex = 6;

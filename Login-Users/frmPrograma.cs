@@ -26,7 +26,7 @@ namespace Login_Users
 
         private void frmPrograma_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            
         }
 
         private void frmPrograma_Load(object sender, EventArgs e)

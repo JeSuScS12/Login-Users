@@ -121,7 +121,7 @@ namespace Login_Users
 
                     if (nuevo.ValidarUsuario(user, pass))
                     {
-                        frmPrograma frm = new frmPrograma();
+                        frmInicio frm = new frmInicio();
 
                         frm.Show();
                         this.Hide();

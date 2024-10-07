@@ -65,7 +65,7 @@ namespace Login_Users
         //Validar correo
         public void ValidarC(Label lbl, TextBox txt)
         {
-            // Expresión regular para letras y espacios
+            // Expresión regular Para validar correo
             string validacion = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
             if (!Regex.IsMatch(txt.Text, validacion))
@@ -83,7 +83,7 @@ namespace Login_Users
         //Validar numero
         public void ValidarTelf(Label lbl, TextBox txt)
         {
-            // Expresión regular para letras y espacios
+            // Expresión regular para telefono de 8 caracteres y empieze con 3
             string validacion = "^3\\d{9}$";
 
             if (!Regex.IsMatch(txt.Text, validacion))
@@ -111,8 +111,8 @@ namespace Login_Users
         //Validar Usuario
         public void ValidarUser(Label lbl, TextBox txt)
         {
-            // Expresión regular para letras y espacios
-            string validacion = "^[a-zA-Z]+$";
+            // Expresión regular para letras y numeros
+            string validacion = "^[a-zA-Z0-9]{5,}$";
 
             if (!Regex.IsMatch(txt.Text, validacion))
             {

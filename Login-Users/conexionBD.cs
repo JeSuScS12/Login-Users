@@ -125,10 +125,14 @@ namespace ConexionBD
                 MessageBox.Show(ex.Message);
             }
         }
+
+
         public static class SesionActual
         {
             public static string Usuario { get; set; }  // para guardar el usuario
         }
+
+
         public DataTable DatosCliente()
         {
             DataTable datosCliente = new DataTable();
@@ -329,5 +333,33 @@ namespace ConexionBD
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+        public void ValidarCargaDatos()
+        {
+            //string consulta = "SELECT Nombre, IIF(DatosCargados = True, 'Sí', 'No') FROM Usuarios";
+            conexion = new OleDbConnection(cadena);
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT IIF(DatosCargados = True, 'Sí', 'No') as Estado FROM Cuentas";
+                comando = new OleDbCommand(consulta, conexion);
+
+                using (OleDbDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string estado = reader["Estado"].ToString();
+
+                    }
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
     }
 }
